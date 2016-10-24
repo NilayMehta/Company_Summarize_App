@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Company Summary: {{company}} </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styalized_results.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+<center>
+<header id="top" class="about">
+    <div class="text-vertical-center">
+        <br><br>
+        <h1>{{company}} Summary</h1>
+        <h2>{{summary}}</h2>
+        <br>
+        <h2> Buzzwords: {{buzzWords}} </h2>
+        <br>
+        <h2>Quick Job Listings:</h2>
+        <ul style="display:table; margin:0 auto;">
+        <h3>
+        {% for job in jobList %}
+             <li style="list-style-type: none;">{{job}}</li>
+        {% endfor %}
+        </h3>
+        </ul>
+        <br>
+        <h2>News Stories</h2>
+        <ul>
+        <h3>
+        {% for article in news %}
+            <li style="list-style-type: none;">{{article}}</li>
+        {% endfor %}
+        </h3>
+        </ul>
+    </div>
+</header>
+</center>
+<div style="position: fixed; bottom: 0; right: 0; width: 200px; text-align:right;>
+    <span style="position: absolute; bottom: 0; right: 0;" id=indeed_at>
+    <a href="javascript:history.back()">Back </a>
+    <a href="http://www.indeed.com/">jobs</a> by <a
+        href="http://www.indeed.com/" title="Job Search"><img
+        src="http://www.indeed.com/p/jobsearch.gif" style="border: 0; " alt="Indeed job search"></a>
+        </span>
+    </div>
+</body>
+</html>

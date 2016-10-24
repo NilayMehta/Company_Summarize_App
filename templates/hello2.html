@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Summarize Co.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styalized.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+<header id="top" class="header">
+        <div class="text-vertical-center"> <center>
+            <h1>SUMMARIZE CO.</h1>
+            <h3>Enter Company Name Below:</h3>
+<!--             <h4>Do it for harambe</h4> -->
+            <form action="." method="POST">
+                    <input type="text" name="text"> <h4>Major:</h4>
+                     <select name= "major">
+                        <option value="Computer+Science">Computer Science</option>
+                        <option value="Computer+Science">Computer Science</option>
+                        <option value="Computer+Science">Computer Science</option>
+                        <option value="Computer+Science">Computer Science</option>
+                    </select>
+                    <h4>Job Type</h4>
+                    <select name= "jobType">
+                        <option value="">All</option>
+                        <option value="fulltime">Full-Time</option>
+                        <option value="internship">Internship</option>
+                    </select>
+                     &nbsp; &nbsp;<input type="submit" name="text-form" value="Search">
+                </form>
+            </center>
+        </div>
+    </header>
+
+</body>
+
+</html>
